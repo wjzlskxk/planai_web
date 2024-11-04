@@ -35,26 +35,31 @@ const Home = () => {
 
   return (
     <S.Wrapper>
-      <div style={{ height: 80, width: "100%", background: "red" }}></div>
       <S.BackGroundWrapper>
-        <span onClick={() => setSideBar(!sidebar)} style={{ position: "absolute" }}>
-          x
-        </span>
-        {sidebar === true ? (
-          <div onClick={() => setSideBar(!sidebar)} style={{ height: "100%", width: 200, background: "black" }} />
-        ) : (
-          <></>
-        )}
-
-        <S.MainWrapper>
-          <img src={Img} alt="" style={{ width: 400, height: 230, marginTop: 40 }} />
-          <S.CardList>
-            {ListItemData.map((item, idx) => (
-              <ListItem key={idx} title={item.title} img={item.img} des={item.des} />
-            ))}
-          </S.CardList>
-          <div></div>
-        </S.MainWrapper>
+        <div style={{ height: 80, width: "100%", background: "red" }}></div>
+        <S.RowWrapper>
+          <span onClick={() => setSideBar(!sidebar)} style={{ position: "absolute" }}>
+            x
+          </span>
+          {sidebar === true ? (
+            <div onClick={() => setSideBar(!sidebar)} style={{ height: "100%", width: 200, background: "black" }} />
+          ) : (
+            <></>
+          )}
+          <S.MainWrapper>
+            <img src={Img} alt="" style={{ width: 400, height: 230, marginTop: 30 }} />
+            <div style={{ width: "auto", height: "auto", display: "flex", flexDirection: "column" }}>
+              <S.CardList>
+                {ListItemData.map((item, idx) => (
+                  <ListItem key={idx} title={item.title} img={item.img} des={item.des} />
+                ))}
+              </S.CardList>
+              <div style={{ marginBottom: 10, alignSelf: "end", marginTop: 30 }}>
+                <span>{"기획서 작성하기 >"}</span>
+              </div>
+            </div>
+          </S.MainWrapper>
+        </S.RowWrapper>
       </S.BackGroundWrapper>
     </S.Wrapper>
   );
