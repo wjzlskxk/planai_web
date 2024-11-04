@@ -96,7 +96,7 @@ export const Input = styled.div`
     }
 
     input {
-      width: 90%;
+      width: 70%;
       height: 90%;
 
       border: none;
@@ -114,6 +114,29 @@ export const Input = styled.div`
       &::placeholder {
         color: #a1a1a1;
       }
+    }
+
+    button {
+      width: 30%;
+      height: 100%;
+      padding: 25px 0px 25px 0px;
+
+      background-color: ${PlanaiColorToken.purple50};
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: #fff;
+      font-family: Pretendard;
+      font-size: 20px;
+      font-weight: 500;
+      letter-spacing: -0.15px;
+
+      border: none;
+      border-radius: 10px;
+
+      cursor: pointer;
     }
   }
 `;
