@@ -96,4 +96,21 @@ export const PlanaiColorToken = Object.freeze({
   red30: "#990D00",
   red20: "#5B0B0B",
   red10: "#2E0606",
+
+  //MARK: - Opacity
+  opacity0: "#FFF",
+  opacity5: "#F5F5F5",
+  opacity8: "#E4E4E4",
+  opacity12: "#E4E4E4",
+  opacity16: "#D2D2D2",
+  opacity22: "#C4C4C5",
+  opacity28: "#B7B7B8",
+  opacity35: "#A7A7A8",
+  opacity43: "#959596",
+  opacity52: "#818182",
+  opacity61: "#6D6D6E",
+  opacitry74: "#505052",
+  opacity88: "#323234",
+  opacity97: "#1E1E20",
+  opacity100: "#171719",
 });
