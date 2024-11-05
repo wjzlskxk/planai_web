@@ -5,7 +5,7 @@ import HeaderBackground from "src/assets/images/Header.png";
 export const HeaderWrap = styled.div`
   width: calc(100vw - 20px);
   height: 100px;
-  min-height: 80px;
+  min-height: 100px;
 
   background-image: url(${HeaderBackground});
   background-repeat: no-repeat;

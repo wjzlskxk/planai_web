@@ -8,9 +8,9 @@ function App() {
   return (
     <div className="App">
       <QueryClientProvider>
-        {/* <Router /> */}
-        <Header />
-        <Sidebar />
+        <Router />
+        {/* <Header />
+        <Sidebar /> */}
       </QueryClientProvider>
     </div>
   );
