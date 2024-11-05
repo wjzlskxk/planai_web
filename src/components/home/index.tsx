@@ -6,6 +6,7 @@ import img1 from "src/assets/images/item1.png";
 import img2 from "src/assets/images/item2.png";
 import img3 from "src/assets/images/item3.png";
 import img4 from "src/assets/images/item4.png";
+import Header from "../common/header";
 
 const Home = () => {
   const [sidebar, setSideBar] = useState<boolean>(false);
@@ -36,7 +37,7 @@ const Home = () => {
   return (
     <S.Wrapper>
       <S.BackGroundWrapper>
-        <div style={{ height: 80, width: "100%", background: "red" }}></div>
+        <Header />
         <S.RowWrapper>
           <span onClick={() => setSideBar(!sidebar)} style={{ position: "absolute" }}>
             x
