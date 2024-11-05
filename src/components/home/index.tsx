@@ -1,15 +1,18 @@
 import * as S from "./style";
 import Img from "src/assets/images/main comments.png";
-import { useState } from "react";
+
 import ListItem from "./components";
 import img1 from "src/assets/images/item1.png";
 import img2 from "src/assets/images/item2.png";
 import img3 from "src/assets/images/item3.png";
 import img4 from "src/assets/images/item4.png";
 import Header from "../common/header";
+import Sidebar from "../common/sidebar";
+import Out from "src/assets/images/outButton.png";
+import useSidebar from "src/hooks/common/sidebar/useSIdebar";
 
 const Home = () => {
-  const [sidebar, setSideBar] = useState<boolean>(false);
+  const { isVisible, setIsVisible } = useSidebar();
 
   const ListItemData = [
     {
@@ -34,18 +37,17 @@ const Home = () => {
     },
   ];
 
+  console.log(isVisible);
+
   return (
     <S.Wrapper>
       <S.BackGroundWrapper>
         <Header />
         <S.RowWrapper>
-          <span onClick={() => setSideBar(!sidebar)} style={{ position: "absolute" }}>
-            x
-          </span>
-          {sidebar === true ? (
-            <div onClick={() => setSideBar(!sidebar)} style={{ height: "100%", width: 200, background: "black" }} />
+          {isVisible === false ? (
+            <Sidebar />
           ) : (
-            <></>
+            <img src={Out} alt="" style={{ width: 30, height: 30 }} onClick={() => setIsVisible((prev) => !prev)} />
           )}
           <S.MainWrapper>
             <img src={Img} alt="" style={{ width: 400, height: 230, marginTop: 30 }} />
