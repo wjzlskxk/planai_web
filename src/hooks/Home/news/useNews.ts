@@ -1,6 +1,5 @@
-import axios from 'axios';
 import React, { useState } from 'react';
-import CONFIG from 'src/config/config.json';
+import { useGetSearchNewsMutation } from 'src/query/Home/news/news.query';
 import { NewsResponse } from 'src/types/Home/news/news.type';
 
 const useNews = () => {
@@ -10,21 +9,21 @@ const useNews = () => {
   const handlekKeyword = (e: React.ChangeEvent<HTMLInputElement>) => {
     setKeyword(e.target.value);
   };
-
+  const getSearchNewsMutation = useGetSearchNewsMutation();
   const getSearchNews = async (keyword: string) => {
-    try {
-      await axios
-        .get<NewsResponse>(`https://newsapi.org/v2/everything?q=${keyword}`, {
-          headers: {
-            'X-Api-Key': CONFIG.NEWS_API_KEY,
-          },
-        })
-        .then((res) => setNews(res.data));
-    } catch {}
+    getSearchNewsMutation.mutate(keyword, {
+      onSuccess: (res) => {
+        setNews(res);
+      },
+      onError: (error) => {
+        console.log(error);
+      },
+    });
   };
 
   return {
     keyword,
+    news,
     handlekKeyword,
     getSearchNews,
   };

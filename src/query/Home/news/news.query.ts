@@ -1,5 +1,5 @@
 import { AxiosError } from 'axios';
-import { useQuery } from 'react-query';
+import { useMutation, useQuery } from 'react-query';
 import { QUERY_KEYS } from 'src/query/queryKey';
 import newsRepositoryImpl from 'src/repository/Home/news/news.repositoryImpl';
 import { NewsResponse } from 'src/types/Home/news/news.type';
@@ -21,3 +21,8 @@ export const useGetRecommandNewsQuery = () =>
     staleTime: 3600000,
     cacheTime: 3600000,
   });
+
+export const useGetSearchNewsMutation = () => {
+  const mutation = useMutation((keyword: string) => newsRepositoryImpl.getSearchNews(keyword));
+  return mutation;
+};
