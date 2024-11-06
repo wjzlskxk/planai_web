@@ -1,5 +1,5 @@
-import { PlanaiColorToken } from "src/style/token/colorToken";
-import styled from "styled-components";
+import { PlanaiColorToken } from 'src/style/token/colorToken';
+import styled from 'styled-components';
 
 export const NewsWrap = styled.div`
   width: 100vw;
@@ -171,7 +171,6 @@ export const InterestNews = styled.div`
 
   div {
     width: calc(100% - 10px);
-    height: calc(25% - 30px);
     border: none;
     border-bottom: 1px solid ${PlanaiColorToken.netural90};
 
@@ -181,6 +180,8 @@ export const InterestNews = styled.div`
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    cursor: pointer;
 
     span {
       color: ${PlanaiColorToken.common0};
@@ -219,4 +220,40 @@ export const Recommaned = styled.div`
 
   border: none;
   border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow-y: auto;
+
+  div {
+    width: 45%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    cursor: pointer;
+
+    div {
+      width: 90%;
+      height: 50%;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      border-bottom: 1px solid ${PlanaiColorToken.netural90};
+      justify-content: center;
+
+      span {
+        color: ${PlanaiColorToken.common0};
+        font-family: Pretendard;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 22px; /* 146.667% */
+        letter-spacing: -0.15px;
+      }
+    }
+  }
 `;
