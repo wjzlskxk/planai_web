@@ -7,11 +7,15 @@ import useNews from 'src/hooks/Home/news/useNews';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import 'dayjs/locale/ko';
+import { useGetInterestNewsQuery, useGetMainNewsQuery, useGetRecommandNewsQuery } from 'src/query/Home/news/news.query';
 
 const News = () => {
   dayjs.locale('ko');
   dayjs.extend(relativeTime);
-  const { keyword, handlekKeyword, mainNews, interestNews, getSearchNews, recommandNews } = useNews();
+  const { keyword, handlekKeyword, getSearchNews } = useNews();
+  const { data: mainNews } = useGetMainNewsQuery();
+  const { data: interestNews } = useGetInterestNewsQuery();
+  const { data: recommandNews } = useGetRecommandNewsQuery();
   return (
     <S.NewsWrap>
       <Header />
