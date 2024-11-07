@@ -12,6 +12,8 @@ export const BackGroundWrapper = styled.div`
   height: calc(100%-80px);
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
 `;
 export const MainWrapper = styled.div`
   width: 100%;

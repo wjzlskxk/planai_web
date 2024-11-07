@@ -10,6 +10,7 @@ import Header from "../common/header";
 import Sidebar from "../common/sidebar";
 import Out from "src/assets/images/outButton.png";
 import useSidebar from "src/hooks/common/sidebar/useSIdebar";
+import BottomBar from "../common/bottombar";
 
 const Home = () => {
   const { isVisible, setIsVisible } = useSidebar();
@@ -63,6 +64,7 @@ const Home = () => {
             </div>
           </S.MainWrapper>
         </S.RowWrapper>
+        <BottomBar />
       </S.BackGroundWrapper>
     </S.Wrapper>
   );
