@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Page from "src/assets/images/common/bottombar/page.png";
 import Select from "src/assets/images/common/bottombar/selectpage.png";
 import { PageType } from "src/types/common/bottomBar/bottom.type";
