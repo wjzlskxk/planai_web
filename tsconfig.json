@@ -19,13 +19,13 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"],
-      "@/components/*": ["./src/components/*"],
-      "@/hooks/*": ["./src/hooks/*"],
-      "@/constant": ["./src/constant/*"],
-      "@/queries": ["./src/queries/*"],
-      "@/repositories": ["./src/repositories/*"],
-      "@/config": ["./src/config/*"]
+      "src/*": ["./src/*"],
+      "src/components/*": ["./src/components/*"],
+      "src/hooks/*": ["./src/hooks/*"],
+      "src/constant": ["./src/constant/*"],
+      "src/queries": ["./src/queries/*"],
+      "src/repositories": ["./src/repositories/*"],
+      "src/config": ["./src/config/*"]
     },
     "baseUrl": "."
   },

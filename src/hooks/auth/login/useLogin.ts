@@ -1,5 +1,5 @@
 import { usePostLoginMutation } from "src/query/auth/login/login.query";
-import { Login } from "@/types/auth/auth.type";
+import { Login } from "src/types/auth/auth.type";
 import React, { useCallback, useState } from "react";
 import token from "src/libs/token/tokens";
 import { ACCESS_TOKEN_KEY, REFRESH_TOKEN_KEY } from "src/constants/token/token.constants";
