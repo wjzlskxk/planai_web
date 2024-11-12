@@ -1,7 +1,6 @@
 import React from 'react';
 import QueryClientProvider from './components/common/provider/query-provier';
 import Router from './components/router';
-
 function App() {
   return (
     <div className="App">
