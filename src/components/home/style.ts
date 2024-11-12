@@ -13,7 +13,7 @@ export const BackGroundWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 20px;
+
 `;
 export const MainWrapper = styled.div`
   width: 100%;

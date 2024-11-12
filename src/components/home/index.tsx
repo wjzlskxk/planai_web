@@ -62,9 +62,9 @@ const Home = () => {
                 <span>{"기획서 작성하기 >"}</span>
               </div>
             </div>
+            <BottomBar />
           </S.MainWrapper>
         </S.RowWrapper>
-        <BottomBar />
       </S.BackGroundWrapper>
     </S.Wrapper>
   );
