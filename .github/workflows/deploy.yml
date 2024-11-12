@@ -33,3 +33,4 @@ jobs:
                 --deployment-config-name CodeDeployDefault.AllAtOnce
                 --deployment-group-name planai-codeDeploy-group
                 --s3-location bucket=planai-bucket,bundleType=zip,key=build.zip
+                
