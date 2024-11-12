@@ -26,11 +26,10 @@ jobs:
                 aws-region: ${{ secrets.AWS_REGION }}
             - name: Upload to S3
               run: |
-                aws s3 cp --region us-east-2 ./build.zip s3://planai-bucket/build.zip
+                aws s3 cp --region us-east-2 ./build.zip s3://planaibucket/build.zip
             - name: Deploy
               run: aws deploy create-deployment
                 --application-name planai-codeDeploy
                 --deployment-config-name CodeDeployDefault.AllAtOnce
                 --deployment-group-name planai-codeDeploy-group
                 --s3-location bucket=planai-bucket,bundleType=zip,key=build.zip
-                
