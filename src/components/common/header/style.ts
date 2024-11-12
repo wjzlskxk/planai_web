@@ -19,7 +19,7 @@ export const HeaderWrap = styled.div`
 `;
 
 export const ButtonWrap = styled.div`
-  width: 10%;
+  width: 12%;
   height: 60%;
 
   background-color: #f2f2f8;
@@ -41,7 +41,8 @@ export const ButtonWrap = styled.div`
   span {
     color: ${PlanaiColorToken.purple50};
     font-family: Pretendard;
-    font-size: 28px;
+    width: fit-content;
+    font-size: 24px;
     font-weight: 500;
     letter-spacing: 0.9px;
   }
