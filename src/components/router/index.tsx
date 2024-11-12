@@ -1,6 +1,7 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Login from '../auth/login';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "../auth/login";
+import News from "../Home/news";
 import SignupEmail from 'src/components/auth/signup/email';
 import SignupPassword from 'src/components/auth/signup/password';
 const Router = () => {
@@ -8,6 +9,7 @@ const Router = () => {
     <BrowserRouter basename="/">
       <Routes>
         <Route path="/login" element={<Login />} />
+        <Route path="/news" element={<News />} />
         <Route path="/signup/email" element={<SignupEmail />} />
         <Route path="/signup/password" element={<SignupPassword />} />
       </Routes>
