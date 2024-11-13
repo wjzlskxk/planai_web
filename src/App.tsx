@@ -1,7 +1,7 @@
 import React from "react";
-import Home from "./components/home";
 import QueryClientProvider from "./components/common/provider/query-provier";
 import BottomBar from "./components/common/bottombar";
+import Router from "./components/router";
 function App() {
   return (
     <div className="App">
