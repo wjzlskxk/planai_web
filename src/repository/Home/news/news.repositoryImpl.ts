@@ -1,12 +1,11 @@
 import axios from 'axios';
 import { NewsRepository } from './news.repository';
-import CONFIG from 'src/config/config.json';
 import { NewsResponse } from 'src/types/Home/news/news.type';
 
 const newsInstance = axios.create({
   baseURL: 'https://newsapi.org/v2',
   headers: {
-    'X-Api-Key': CONFIG.NEWS_API_KEY,
+    'X-Api-Key': process.env.REACT_APP_NEWS_API_KEY
   },
 });
 
