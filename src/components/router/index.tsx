@@ -5,7 +5,7 @@ import SignupPassword from 'src/components/auth/signup/password';
 import Profile from '../common/profile';
 import Login from '../auth/login';
 import News from '../Home/news';
-import Home from '../Home';
+import Home from "src/components/Home/index";
 
 const Router = () => {
   return (
